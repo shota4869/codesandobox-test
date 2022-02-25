@@ -47,3 +47,17 @@ console.log(message1);
 const { name, age } = my;
 const message2 = `名前は${name}です。年齢は${age}歳です`;
 console.log(message2);
+
+const me = ["sho", 28];
+
+const message3 = `名前は${me[0]}です。年齢は${me[1]}歳です`;
+console.log(message3);
+const [name1, age2] = me;
+const message4 = `名前は${name1}です。年齢は${age2}歳です`;
+console.log(message4);
+
+/**
+ * デフォルト値
+ */
+const sayHello = (name = "sho") => console.log(`こんにちわ${name}さん`);
+sayHello("shota");
