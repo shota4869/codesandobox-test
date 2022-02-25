@@ -103,3 +103,22 @@ console.log(arry7);
 arry6[0] = 100;
 console.log(arry4);
 console.log(arry6);
+
+/**
+ * mapやfilter
+ */
+const nameArry = ["田中", "山田", "タカセ"];
+const nameArry2 = nameArry.map((name) => {
+  return name;
+});
+console.log(nameArry2);
+
+nameArry.map((name) => console.log(name));
+
+const numArry = [1, 2, 3, 4, 5];
+const newNumArry = numArry.filter((num) => {
+  return num % 2 === 0;
+});
+console.log(newNumArry);
+
+nameArry.map((name, index) => console.log(`${index++}番目は${name}です`));
