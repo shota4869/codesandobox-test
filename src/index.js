@@ -61,3 +61,45 @@ console.log(message4);
  */
 const sayHello = (name = "sho") => console.log(`こんにちわ${name}さん`);
 sayHello("shota");
+
+/**
+ * スプレッド構文
+ */
+//配列の展開
+const arry = [1, 2];
+console.log(arry);
+console.log(...arry); //配列の中身を展開して処理してくれる
+
+const sumFn = (num1, num2) => console.log(num1 + num2);
+sumFn(...arry);
+
+/**
+ * まとめる
+ */
+const arry2 = [1, 2, 3, 4, 5];
+const [num1, num2, ...arry3] = arry2;
+console.log(num1);
+console.log(num2);
+console.log(arry3);
+
+/**
+ * 配列のコピー、結合
+ */
+const arry4 = [10, 20];
+const arry5 = [30, 40];
+
+const arry6 = [...arry4];
+console.log(arry6);
+
+const arry7 = [...arry4, ...arry5];
+console.log(arry7);
+
+// const arry8 = arry4;
+// console.log(arry8);
+
+// arry8[0] = 100;
+// console.log(arry4);
+
+arry6[0] = 100;
+console.log(arry4);
+console.log(arry6);
